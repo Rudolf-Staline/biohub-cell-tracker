@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "biohub-cell-tracker"
-version = "0.1.0"
+version = "0.2.0"
 description = "Kaggle-ready baseline for 3D+t cell detection, tracking, and lineage reconstruction."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -18,10 +18,15 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+oracle = [
+  "geff>=1.1.3.1.1,<2",
+  "networkx>=3.2.1",
+]
 dev = [
   "pytest>=8.0",
   "nbformat>=5.10",
   "ruff>=0.6",
+  "networkx>=3.2.1",
 ]
 
 [project.scripts]
