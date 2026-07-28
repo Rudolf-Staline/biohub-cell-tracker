@@ -49,3 +49,37 @@ class LineageGraph:
         if edge.source_uid not in self.nodes or edge.target_uid not in self.nodes:
             raise ValueError("edge endpoints must exist before adding an edge")
         self.edges.append(edge)
+
+    def frames(self) -> list[list[Detection]]:
+        by_time: dict[int, list[Detection]] = {}
+        for node in self.nodes.values():
+            by_time.setdefault(node.t, []).append(node)
+        if not by_time:
+            return []
+        first_t, last_t = min(by_time), max(by_time)
+        return [
+            sorted(by_time.get(t, []), key=lambda node: node.uid)
+            for t in range(first_t, last_t + 1)
+        ]
+
+    def edge_pairs(self) -> set[tuple[int, int]]:
+        return {(edge.source_uid, edge.target_uid) for edge in self.edges}
+
+    def children_count(self) -> dict[int, int]:
+        counts: dict[int, int] = {}
+        for edge in self.edges:
+            counts[edge.source_uid] = counts.get(edge.source_uid, 0) + 1
+        return counts
+
+    def division_sources(self) -> set[int]:
+        return {source for source, count in self.children_count().items() if count == 2}
+
+    def division_events(self) -> set[tuple[int, tuple[int, int]]]:
+        children: dict[int, list[int]] = {}
+        for edge in self.edges:
+            children.setdefault(edge.source_uid, []).append(edge.target_uid)
+        return {
+            (source, tuple(sorted(targets)))
+            for source, targets in children.items()
+            if len(targets) == 2
+        }
