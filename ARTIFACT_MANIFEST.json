@@ -7,8 +7,8 @@
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "7fef66f309d50768ffebf7690a075f2cf16b10d9c93de724f82b51cbc06f5cd1",
-      "bytes": 392
+      "sha256": "b748e3eafced924060d028521ddeb6c9fc9f8bac8b58633f775cfdc3d1b952b8",
+      "bytes": 749
     },
     {
       "path": ".gitignore",
@@ -57,8 +57,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "c295309134b15d5694a2592f94583bffed1a1615d60cc9257cd75825fb1a57e2",
-      "bytes": 880
+      "sha256": "84cced41542164cb5449804c1e441668f51ae262f172f65397824f2aab72fafb",
+      "bytes": 962
     },
     {
       "path": "src/biohub_tracker/__init__.py",
@@ -147,8 +147,8 @@
     },
     {
       "path": "tests/test_pipeline.py",
-      "sha256": "9f181ed7dc7c778ebc93500c41ee24f41b858120e134c617c810f4d1d87e690f",
-      "bytes": 1221
+      "sha256": "c7d4b9d3698560976168fa3e7c3961778b69f5dbc4f206bd4a99c84209078130",
+      "bytes": 1155
     },
     {
       "path": "tests/test_submission.py",
