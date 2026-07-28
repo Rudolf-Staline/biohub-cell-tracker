@@ -1,3 +1,12 @@
-# Experiment ledger
+# Registre d'expériences
 
-Chaque exécution significative doit ajouter une ligne à `ledger.csv`. Aucun score ne doit être associé à une configuration sans hash du code, split de validation et hash de la sortie.
+Chaque ligne de `ledger.csv` doit relier une configuration, un commit et des métriques reproductibles.
+
+La première expérience V1 à lancer est la validation oracle :
+
+```bash
+biohub-track oracle-eval \
+  --train-dir /chemin/vers/train \
+  --config configs/baseline.json \
+  --output experiments/oracle_v1.csv
+```
