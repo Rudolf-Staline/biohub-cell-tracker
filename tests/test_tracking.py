@@ -26,3 +26,15 @@ def test_division_replaces_single_match_with_two_children():
     edges = tracker.link_pair([d(1, 0, 0)], [d(2, 1, -1), d(3, 1, 1)])
     assert {(e.source_uid, e.target_uid) for e in edges} == {(1, 2), (1, 3)}
     assert all(e.kind == "division" for e in edges)
+
+
+def test_frames_preserve_empty_timepoints():
+    from biohub_tracker.types import LineageGraph
+
+    graph = LineageGraph("demo")
+    graph.add_nodes([d(1, 0, 0), d(2, 2, 2)])
+
+    frames = graph.frames()
+
+    assert len(frames) == 3
+    assert frames[1] == []
