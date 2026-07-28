@@ -1,0 +1,124 @@
+{
+  "artifact_name": "biohub-cell-tracker-v0",
+  "version": "0.1.0",
+  "created_at": "2026-07-28",
+  "purpose": "Kaggle-ready baseline scaffold for 3D+t cell detection and lineage tracking",
+  "test_status": "6 passed",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "bfbe189d9c77614ede2d0868aba16e2047eb9ff3b6c253bc891a2a222a23cb6a",
+      "bytes": 148
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "70c0764d7c798177bcc62cbee16f179e994c847d830b765e96fe42a1361228ef",
+      "bytes": 813
+    },
+    {
+      "path": "README.md",
+      "sha256": "3e9ee3de94db5b3d2e3840072019e72fe92d94091f61b53201e0de8f186aef3f",
+      "bytes": 1706
+    },
+    {
+      "path": "configs/baseline.json",
+      "sha256": "8788271db8c3a15b646739611c21aa5ce1f5284d90b85cc5f223bc3207fb3783",
+      "bytes": 511
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "d4812c4bf88f51df80d2d70656943ebd6f3c375416f56167f72cef5dab6168fd",
+      "bytes": 878
+    },
+    {
+      "path": "experiments/README.md",
+      "sha256": "e18bb0ef8e31e903789259fa4f65dc4af542cd375f7aa6c48fd632ef4e09442a",
+      "bytes": 210
+    },
+    {
+      "path": "experiments/ledger.csv",
+      "sha256": "4da0402c25656b34922b625de1eb54fc4a70f45b5bad6b87b5f03027b4b68e4a",
+      "bytes": 210
+    },
+    {
+      "path": "notebooks/biohub_submission_v0.ipynb",
+      "sha256": "8a4892bdc6076a332d1157ac53faba7638ef680c87dd8f1ea75acc5e711c1251",
+      "bytes": 3680
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "9725dd74f91f71aa0fc21375636bf9f71c0f3036194d15c9d78c62e506d87771",
+      "bytes": 801
+    },
+    {
+      "path": "src/biohub_tracker/__init__.py",
+      "sha256": "d0769378107ad557214bd5ad520b65eaee7a7142a3f51d6ca3c429f9f4c81afc",
+      "bytes": 303
+    },
+    {
+      "path": "src/biohub_tracker/__main__.py",
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+      "bytes": 30
+    },
+    {
+      "path": "src/biohub_tracker/cli.py",
+      "sha256": "287728468edbab764ab9b55beb77c46aeaf115b90f0c304ca3d42538f7c2e3d8",
+      "bytes": 1463
+    },
+    {
+      "path": "src/biohub_tracker/config.py",
+      "sha256": "f4ac790ddeae77350620ef4bd83eef0ee8ad8fc4b52221b998cec27e3399eb82",
+      "bytes": 1380
+    },
+    {
+      "path": "src/biohub_tracker/detection.py",
+      "sha256": "8876d0da6abe4290ee254f3dc6de7510ee32879a790ae440c148c37057a773f3",
+      "bytes": 5393
+    },
+    {
+      "path": "src/biohub_tracker/pipeline.py",
+      "sha256": "99f6f2f6f49a1873d70695d185f4876f83350420c97442bc547076535f3f4e9b",
+      "bytes": 2671
+    },
+    {
+      "path": "src/biohub_tracker/submission.py",
+      "sha256": "035cf960686c24627accb4a02bec75729d4225123fb6c8866f642391cbc1c70f",
+      "bytes": 6160
+    },
+    {
+      "path": "src/biohub_tracker/tracking.py",
+      "sha256": "ed7917eaf31af48a64718e03bb9f0e0e061a8e9ed51e2ea0814a07ba7f33b054",
+      "bytes": 6394
+    },
+    {
+      "path": "src/biohub_tracker/types.py",
+      "sha256": "00cb29409e3ed41386b8776890ca8d9cbcdbd9a7e968549deae8e89cef317c91",
+      "bytes": 1776
+    },
+    {
+      "path": "src/biohub_tracker/zarr_io.py",
+      "sha256": "44ea318b20f4629fc37c8b0ed99c79c92e18dfa61eaa40d65c86e5b5d9ee6f98",
+      "bytes": 4133
+    },
+    {
+      "path": "tests/test_detection.py",
+      "sha256": "aac615d72f974e0231d7296c3ec35e23f0e14c0ed2ec26ddee5c789108446c28",
+      "bytes": 671
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "sha256": "9f181ed7dc7c778ebc93500c41ee24f41b858120e134c617c810f4d1d87e690f",
+      "bytes": 1221
+    },
+    {
+      "path": "tests/test_submission.py",
+      "sha256": "46d5fd6ca12fc2b45e7e591e120203facbcacf6fc5d8f1b49a2a06afbd556944",
+      "bytes": 994
+    },
+    {
+      "path": "tests/test_tracking.py",
+      "sha256": "d0b79f449b9e7b6056ed715b3348bc3f9ff81171b1c7cdf74d0ef0a4dc105c94",
+      "bytes": 1016
+    }
+  ]
+}

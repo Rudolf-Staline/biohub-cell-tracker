@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "biohub-cell-tracker"
+version = "0.1.0"
+description = "Kaggle-ready baseline for 3D+t cell detection, tracking, and lineage reconstruction."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Rudolf Hounlete"}]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scipy>=1.11",
+  "zarr>=2.18",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "nbformat>=5.10",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+biohub-track = "biohub_tracker.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/biohub_tracker"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
