@@ -1,10 +1,15 @@
 {
-  "artifact_name": "biohub-cell-tracker-v0",
-  "version": "0.1.0",
+  "artifact_name": "biohub-cell-tracker-v1-oracle",
+  "version": "0.2.0",
   "created_at": "2026-07-28",
-  "purpose": "Kaggle-ready baseline scaffold for 3D+t cell detection and lineage tracking",
-  "test_status": "6 passed",
+  "purpose": "GEFF oracle validation and Kaggle-ready 3D+t cell tracking baseline",
+  "test_status": "12 passed",
   "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "e90aa32bbd4dbcfa56114e3b3465872290a9b98d69c2f62d47b0765050d46bdb",
+      "bytes": 756
+    },
     {
       "path": ".gitignore",
       "sha256": "bfbe189d9c77614ede2d0868aba16e2047eb9ff3b6c253bc891a2a222a23cb6a",
@@ -17,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "3e9ee3de94db5b3d2e3840072019e72fe92d94091f61b53201e0de8f186aef3f",
-      "bytes": 1706
+      "sha256": "adc3dccd0e4d19f8976e6373cf9158b95ccc6dac2775d522b8a9fd339e60c373",
+      "bytes": 2558
     },
     {
       "path": "configs/baseline.json",
@@ -31,14 +36,19 @@
       "bytes": 878
     },
     {
+      "path": "docs/oracle_validation.md",
+      "sha256": "3ea04910db3e526349380bc97f2b247445145de0dcc24396044b605476238e14",
+      "bytes": 1184
+    },
+    {
       "path": "experiments/README.md",
-      "sha256": "e18bb0ef8e31e903789259fa4f65dc4af542cd375f7aa6c48fd632ef4e09442a",
-      "bytes": 210
+      "sha256": "86c6d34724c463fac7f1b148434df33312d38db0f93fb41ff5485fd095318108",
+      "bytes": 344
     },
     {
       "path": "experiments/ledger.csv",
-      "sha256": "4da0402c25656b34922b625de1eb54fc4a70f45b5bad6b87b5f03027b4b68e4a",
-      "bytes": 210
+      "sha256": "1fd1be9fb4aeb9bb9f2a81c8f0493842f935ec52ccfff90c2e17574f83653b59",
+      "bytes": 415
     },
     {
       "path": "notebooks/biohub_submission_v0.ipynb",
@@ -47,13 +57,13 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "9725dd74f91f71aa0fc21375636bf9f71c0f3036194d15c9d78c62e506d87771",
-      "bytes": 801
+      "sha256": "df90791365292abeedef4cee61822d3727984106540a4e8ccad45401da48fbeb",
+      "bytes": 962
     },
     {
       "path": "src/biohub_tracker/__init__.py",
-      "sha256": "d0769378107ad557214bd5ad520b65eaee7a7142a3f51d6ca3c429f9f4c81afc",
-      "bytes": 303
+      "sha256": "b8589f10d4038e86d93c2178e8eb2dbb274c2c6e9670ff3ccb07de317da8e3c8",
+      "bytes": 495
     },
     {
       "path": "src/biohub_tracker/__main__.py",
@@ -62,8 +72,8 @@
     },
     {
       "path": "src/biohub_tracker/cli.py",
-      "sha256": "287728468edbab764ab9b55beb77c46aeaf115b90f0c304ca3d42538f7c2e3d8",
-      "bytes": 1463
+      "sha256": "7271a6db50ada98ddd56da4c298ffc620c7b084749fccfe5e6c7111afb97cc41",
+      "bytes": 2489
     },
     {
       "path": "src/biohub_tracker/config.py",
@@ -74,6 +84,21 @@
       "path": "src/biohub_tracker/detection.py",
       "sha256": "8876d0da6abe4290ee254f3dc6de7510ee32879a790ae440c148c37057a773f3",
       "bytes": 5393
+    },
+    {
+      "path": "src/biohub_tracker/evaluation.py",
+      "sha256": "ca9b2a2b612ab5b9cecfa6179aea28f1a3748560fe881d3feba08b46d084a148",
+      "bytes": 3022
+    },
+    {
+      "path": "src/biohub_tracker/geff_io.py",
+      "sha256": "e9ab73aa4b3678dcf8d8d957decd5ce672637682c5345e0aec09a759b5f88e31",
+      "bytes": 7969
+    },
+    {
+      "path": "src/biohub_tracker/oracle.py",
+      "sha256": "6a9c3e646a3b290bceb33ffbb3e6c061e38d646cbf774ac2eb1326d413417139",
+      "bytes": 3559
     },
     {
       "path": "src/biohub_tracker/pipeline.py",
@@ -92,8 +117,8 @@
     },
     {
       "path": "src/biohub_tracker/types.py",
-      "sha256": "00cb29409e3ed41386b8776890ca8d9cbcdbd9a7e968549deae8e89cef317c91",
-      "bytes": 1776
+      "sha256": "cc99a7d24a45fdfa3f31e82aa50843ac49c97213fdaff0cbb7df1e64c84909d3",
+      "bytes": 3060
     },
     {
       "path": "src/biohub_tracker/zarr_io.py",
@@ -106,9 +131,24 @@
       "bytes": 671
     },
     {
+      "path": "tests/test_evaluation.py",
+      "sha256": "2fb08a9618fdbb89069b4335e46419ca0b1c9c8c6227b9d2a30273257a8cc9ac",
+      "bytes": 994
+    },
+    {
+      "path": "tests/test_geff_io.py",
+      "sha256": "a46ca142af9740c307065081ebfe463bbdca60ae85b8e641eeea90effbdaa674",
+      "bytes": 1612
+    },
+    {
+      "path": "tests/test_oracle.py",
+      "sha256": "8adf7be8478ab31cabc7e4f3b014535649a68493394aa8200db0552322a217b2",
+      "bytes": 888
+    },
+    {
       "path": "tests/test_pipeline.py",
-      "sha256": "9f181ed7dc7c778ebc93500c41ee24f41b858120e134c617c810f4d1d87e690f",
-      "bytes": 1221
+      "sha256": "c7d4b9d3698560976168fa3e7c3961778b69f5dbc4f206bd4a99c84209078130",
+      "bytes": 1155
     },
     {
       "path": "tests/test_submission.py",
@@ -117,8 +157,8 @@
     },
     {
       "path": "tests/test_tracking.py",
-      "sha256": "d0b79f449b9e7b6056ed715b3348bc3f9ff81171b1c7cdf74d0ef0a4dc105c94",
-      "bytes": 1016
+      "sha256": "0a1dd7a49ee0634ae4e405f8fb27d09859c9245b0ff5f6900cd0c76fd166ef93",
+      "bytes": 1278
     }
   ]
 }

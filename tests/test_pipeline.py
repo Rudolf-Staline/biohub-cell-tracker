@@ -1,9 +1,8 @@
-from pathlib import Path
 import numpy as np
 
 from biohub_tracker.config import DetectorConfig, PipelineConfig, TrackerConfig
 from biohub_tracker.pipeline import BaselinePipeline
-from biohub_tracker.submission import audit_submission
+from biohub_tracker.submission import audit_submission, graph_to_submission
 
 
 class FakeMovie:
@@ -31,7 +30,6 @@ def test_process_movie_produces_valid_graph():
         tracker=TrackerConfig(max_link_distance_um=5.0),
     )
     graph, stats, _ = BaselinePipeline(config).process_movie(FakeMovie())
-    from biohub_tracker.submission import graph_to_submission
     report = audit_submission(graph_to_submission([graph]))
     assert report.valid, report.errors
     assert stats.frames == 3

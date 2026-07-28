@@ -1,1 +1,2 @@
 experiment_id,date,code_commit,config_hash,data_split,detector,tracker,solver,detection_precision,detection_recall,edge_jaccard,division_jaccard,total_score,runtime_minutes,submission_sha256,kaggle_score,notes
+oracle-v1-pending,2026-07-28,pending,configs/baseline.json,all-train-geff,oracle-geff-centroids,hungarian-geometric,linear-sum-assignment,,,,,,,,,Run biohub-track oracle-eval and replace this pending row.
